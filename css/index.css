@@ -273,6 +273,12 @@ header nav a:first-child {
 	margin: 15px;
 }
 
+@media(max-width: 500px) {
+    .bottom-columns div {
+        margin: 10px;
+    }
+}
+
 address {
 	margin-bottom: 60px;
 }
