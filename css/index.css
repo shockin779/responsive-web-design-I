@@ -299,12 +299,13 @@ footer {
 
 /* Styles for services.html*/
 div.service-page {
-	width: 850px;
+    max-width: 850px;
+    width: 98%;
 }
 
 .services-header-img {
-	width: 850px;
-	height: 170px;
+	width: 100%;
+	height: auto;
 	margin: 20px 0px;
 }
 
@@ -322,12 +323,35 @@ div.service-page {
 	border-bottom: 3px solid gray;
 }
 
+@media(max-width: 500px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .services-container div {
 	border: 2px solid gray;
 	background-color: #F4F3F4;
-	width: 400px;
+    max-width: 400px;
+    width: 48%;
 	padding: 15px;
 	margin: 15px 0px;
+}
+
+@media(max-width: 500px) {
+    .services-container div {
+        width: 95%;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .services-container h3 {
+        text-align: center;
+    }
 }
 
 .services-container div p {
@@ -342,6 +366,12 @@ div.service-page {
 	border: 1px solid gray;
 }
 
+@media(max-width: 500px) {
+    .services-container div button {
+        justify-content: center;
+    }
+}
+
 .services-container div button:hover {
 	background-color: blue;
 	color: white;
@@ -353,12 +383,26 @@ div.service-page {
 	justify-content: space-between;
 }
 
+@media(max-width: 500px) {
+    .about-services {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
 .about-services div {
-	width: 410px;
+	width: 48%;
+}
+
+@media(max-width: 500px) {
+    .about-services div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 .about-services-image img {
-	width: 410px;
+	width: 100%;
 }
 
 .about-services-text p {
@@ -369,8 +413,23 @@ div.service-page {
 	list-style-type: square;
 }
 
+@media(max-width: 500px) {
+    .about-services-text ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
 .about-services-text li {
 	margin: 20px;
+}
+
+@media(max-width: 500px) {
+    .about-services-text li {
+        width: 40%;
+        margin-left: 20px;
+    }
 }
 
 .services-footer {
